@@ -1,0 +1,22 @@
+#Day 2 - Tipping Calculator for Groups
+print("Welcome to the Tip Calculator.")
+
+Total = input("What was the Total Bill? $")
+
+Tip_Percentage = input("What Percentage Tip would You like to Give? 10, 12, or 15? ")
+
+People = input("How many People are Splitting the Bill? ")
+
+#Conversions
+Total = float(Total)
+Tip_Percentage = float(Tip_Percentage)
+People = float(People)
+
+#Calculations
+split_before_tip = Total / People
+split_after_tip = split_before_tip * ( (Tip_Percentage / 100) + 1)
+
+split_after_tip = '{:.2f}'.format(round(split_after_tip,2))
+
+#Printing how much Money each Person will Pay With Tip
+print(f"Each person should pay: ${split_after_tip}")
