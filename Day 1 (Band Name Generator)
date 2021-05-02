@@ -1,0 +1,10 @@
+#Day 1 of Python Programming
+#Band Name Generator
+
+print("Hello, Welcome To Band Name Generator!")
+
+city = input("What is your Favorite City? \n" )
+
+name = input("What is your Pet's Name? \n")
+
+print("Your Band Name could be " + city + " " + name + "!")
