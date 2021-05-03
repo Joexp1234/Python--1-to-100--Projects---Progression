@@ -1,0 +1,98 @@
+#Day 3 - Treasure Chest Game
+#Start of The Game 
+#Large\Full Screen is Highly Recommended
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.") 
+#First Question
+Turn = input('You find yourself in Between Two Paths! Do you turn "Left" or "Right"? \n')
+Turn = Turn.lower()
+if Turn != "left":
+  print('''   _____                         ____                 
+  / ____|                       / __ \                
+ | |  __  __ _ _ __ ___   ___  | |  | |_   _____ _ __ 
+ | | |_ |/ _` | '_ ` _ \ / _ \ | |  | \ \ / / _ \ '__|
+ | |__| | (_| | | | | | |  __/ | |__| |\ V /  __/ |   
+  \_____|\__,_|_| |_| |_|\___|  \____/  \_/ \___|_|   
+                                                      
+                                                      ''')
+  print("You stepped into Quicksand and Sufficated!")
+elif Turn == "left":
+  #Second Question
+  River_Decision = input('You found a River and see a Boat Slowly Floating towards You , Do you "Swim" or "Wait"? \n' )
+  River_Decision = River_Decision.lower()
+  if River_Decision != "wait":
+    print('''   _____                         ____                 
+  / ____|                       / __ \                
+ | |  __  __ _ _ __ ___   ___  | |  | |_   _____ _ __ 
+ | | |_ |/ _` | '_ ` _ \ / _ \ | |  | \ \ / / _ \ '__|
+ | |__| | (_| | | | | | |  __/ | |__| |\ V /  __/ |   
+  \_____|\__,_|_| |_| |_|\___|  \____/  \_/ \___|_|   
+                                                      
+                                                      ''')
+    print("You decided to Swim and got caught by an Alligator who ate You To Death!")
+  elif River_Decision == "wait":
+    #Third Question
+    Color = input('To your Disbelief, you find Three Doors that are All Colored Differently! Do You take the "Purple", "Green", or "Yellow" Door? \n')
+    Color = Color.lower()
+    if Color == "purple":
+      print('''   _____                         ____                 
+  / ____|                       / __ \                
+ | |  __  __ _ _ __ ___   ___  | |  | |_   _____ _ __ 
+ | | |_ |/ _` | '_ ` _ \ / _ \ | |  | \ \ / / _ \ '__|
+ | |__| | (_| | | | | | |  __/ | |__| |\ V /  __/ |   
+  \_____|\__,_|_| |_| |_|\___|  \____/  \_/ \___|_|   
+                                                      
+                                                      ''')
+      print("You chose the Purple Door, inside you Found a room full of Tigers who Ended up Tearing you Apart!")
+    elif Color == "green":
+      print('''   _____                         ____                 
+  / ____|                       / __ \                
+ | |  __  __ _ _ __ ___   ___  | |  | |_   _____ _ __ 
+ | | |_ |/ _` | '_ ` _ \ / _ \ | |  | \ \ / / _ \ '__|
+ | |__| | (_| | | | | | |  __/ | |__| |\ V /  __/ |   
+  \_____|\__,_|_| |_| |_|\___|  \____/  \_/ \___|_|   
+                                                      
+                                                      ''')
+      print("You chose the Green Door, you ended up Walking into a Whole full of Spikes!")
+    elif Color =="yellow":
+      print(''' __   __  _______  __   __    _     _  ___   __    _  __  
+|  | |  ||       ||  | |  |  | | _ | ||   | |  |  | ||  | 
+|  |_|  ||   _   ||  | |  |  | || || ||   | |   |_| ||  | 
+|       ||  | |  ||  |_|  |  |       ||   | |       ||  | 
+|_     _||  |_|  ||       |  |       ||   | |  _    ||__| 
+  |   |  |       ||       |  |   _   ||   | | | |   | __  
+  |___|  |_______||_______|  |__| |__||___| |_|  |__||__| ''')
+      print("You Chose the Yellow Door, inside you Find a Treasure Chest full of Gold and Jewelry! ")
+    else: 
+      print('''   _____                         ____                 
+  / ____|                       / __ \                
+ | |  __  __ _ _ __ ___   ___  | |  | |_   _____ _ __ 
+ | | |_ |/ _` | '_ ` _ \ / _ \ | |  | \ \ / / _ \ '__|
+ | |__| | (_| | | | | | |  __/ | |__| |\ V /  __/ |   
+  \_____|\__,_|_| |_| |_|\___|  \____/  \_/ \___|_|   
+                                                      
+                                                      ''')
+      print("You walk past the Doors and a Coconut falls on your Head which kills you on Impact!")
+#Game is Done
