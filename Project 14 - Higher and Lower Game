@@ -1,0 +1,54 @@
+#Project 14 - Higher or Lower Game
+#Importing
+from art import logo, vs
+from game_data import data
+import random
+from replit import clear
+
+#Beginning Sets of Data
+print(logo)
+score = 0
+game_continue = True
+set_b = random.choice(data)
+
+#Creating Functions
+def format_data(account):
+  set_name = account["name"]
+  set_desc = account["description"]
+  set_country = account["country"]
+  return f"{set_name}, a {set_desc}, from {set_country}"
+
+def check_answer(guess, a_followers, b_followers):
+  if a_followers > b_followers:
+    return guess == 'a'
+  else:
+    return guess == 'b'  
+
+#Game Start 
+while game_continue: 
+
+
+  set_a = set_b
+  set_b = random.choice(data)
+  while set_a == set_b:
+    set_b = random.choice(data)
+
+  print(f"Compare A: {format_data(set_a)}.")
+  print(vs)
+  print(f"Against B: {format_data(set_b)}.")
+
+  guess = input("Who has more followers? Type 'A' or 'B': ").lower()
+
+  a_followers = set_a["follower_count"]
+  b_followers = set_b["follower_count"]
+  is_correct = check_answer(guess, a_followers, b_followers)
+
+  clear()
+
+  if is_correct:
+    score += 1
+    print(f"You're Right! Current Score: {score}.")
+  else:
+    game_continue = False
+    print(f"Sorry, that's wrong. Final score is {score}.")
+#End of Game
